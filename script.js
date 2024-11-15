@@ -54,6 +54,14 @@ function setColor(element) {
 }
 function sendMessage(px, color) {
   
+  //Clear-Button
+  if (px == '99') {
+    const elements = document.querySelectorAll('.pixel');
+
+    elements.forEach(element => {
+    element.style.backgroundColor = 'black';
+  });
+  }
   let payloadObject = {
     px: px,
     color: color
