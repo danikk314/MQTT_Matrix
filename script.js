@@ -46,8 +46,20 @@ for (let i = 1; i <= 64; i++) {
 function setColor(element) {
   colr = document.getElementById('color').value
   element.style.backgroundColor = colr;
+
+  let input = element.id;
+  let number = input.replace("px", "");
+  sendMessage(number, colr);
 }
-function sendMessage() {
+function sendMessage(px, color) {
+  
+  let payloadObject = {
+    px: px,
+    color: color
+  };
+
+  payload = JSON.stringify(payloadObject);
+
   client.publish('Mpx', payload); 
   console.log('Nachricht gesendet:', payload);
 }
