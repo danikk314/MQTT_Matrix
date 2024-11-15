@@ -1,0 +1,8 @@
+#container {
+    width: 65vh;
+    height: 65vh;
+    background-color: lightgray;
+}
+.pixel {
+    background-color: aliceblue;
+}
