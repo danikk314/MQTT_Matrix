@@ -1,5 +1,6 @@
 let colr;
 let payload = "";
+document.getElementById('color').value = "#FFFFFF";
 
 const container = document.getElementById('container');
 
